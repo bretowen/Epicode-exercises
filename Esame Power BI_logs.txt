@@ -1,0 +1,33 @@
+Parte 1:
+ho pulito i file excel
+ho importato su power bi
+ho creato calendar
+ho modificato il formato data/ora in data
+ho fissato e attivato le relazioni tra tabelle, in particolare con calendar. 
+ho creato due misure: una che conta gli ordini (funzione "countrows") e una che, sulla base del calendar creato, conteggia gli ordini del corrispondente periodo del precedente anno (funzione "calculate").
+Ho creato anche una misura che calcola la variazione percentuale tra le due misure precedentemente create. Ho impostato il formato della misura come "percentuale". Questa misura viene poi inserita nel grafico come tooltip.
+ 
+Parte 2:
+ho creato una misura per calcolare gli incassi usando la funzione sumx, che mi consente di calcolare il valore riga per riga (ordine per ordine).
+ho creato misura per individuare incassi dell'anno precedente, usando il calculate per "filtrare" gli incassi con l'anno precedente. 
+Ho creato misura per indiduare variazione percentuale.
+Ho inserito le misure nel grafico a linee. 
+
+Parte 3:
+Ho inserito sulla pagina generale, il drillthrough con product category name.
+creata relazione tra Calendar e order_reviews_dataset
+creata misura total reviews con Countrows
+creata misura average review score
+creata misura positive reviews per individuare la % di voti >=4
+ho creato i vari grafici inserendo di volta in volta le misure sopra citate. 
+Per il grafico sulle reviews manca un collegamento diretto tra olist_order_reviews_dataset e olist_order_items_dataset / products. Ho dovuto creare una tabella di raccordo, con delle merge.
+Ho creato il grafico filed map. Il problema è che le sigle di alcuni paesi del brasile coincidono con quelli degli usa e conseguentemente la mappa indica luoghi erronei. Per risolvere ho prima creato con una DAX una nuova colonna che forza maps (di Bing) a interpretare le sigle come parte del Brasile. Non ha funzionato. 
+Ho allora usato Power Query per applicare un geocoding automatico.
+Per evitare di avere la vista dispersiva della mappa del mondo intero, ho zoomato su Brasile e ho poi disattivato l'auto zoom.   
+ 
+
+
+
+
+
+
