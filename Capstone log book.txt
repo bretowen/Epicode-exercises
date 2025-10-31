@@ -1,0 +1,20 @@
+scaricate tabelle da sito fonte e importate su excel 
+fatto pulizia (es. rinominato colonne, impostato anno di partenza)
+merge con anno e country (inner, così ho ottenuto righe intere e perfetta corrispondenza)
+importato tutto su Power BI
+ho selezionato il grafico a linee e aggiunto uno slicer, aggiungendo una search bar e il "select all" nello slicer. 
+Per evitare somme (a catena) erronee, ho selezionato non somma ma max della popolazione. 
+Ho valutato se inserire in un solo grafico sia l'andamento demografico sia il numero di rifugiati (posto su un asse secondaria che consente di contare in K anzichè in M). Tuttavia le scale sono molto diverse e il grafico poteva essere frainteso. Ho optato per due grafici. 
+opera di miglioramento estetico e comprensivo del grafico. 
+grafico a torta troppo confusionario, aggiunta top 10.
+Il grafico mi mostra correttamente il numero di rifugiati di quell'anno. Però se selezionavo tutti gli anni complessivamente mi faceva una somma automatica di tutti gli anni. Allora ho fatto una dax che calcola la media totale. 
+Creata una dax apposita per la card "World population by year" in modo che se seleziono tutti gli anni per avere una panoramica, non mi somma la popolazione di tutti gli anni con numeri assurdi.
+Idem per la card "N. globale di rifugiati nel mondo"
+
+Creata una nuova misura per calcolare ratio di rifugiati sulla popolazione mondiale.
+
+ho creato nuova dax per individuare percentuale di rifugiati singolo stato rispetto al totale dei rifugiati mondiali. 
+
+ho importato altro file di paesi ospitanti e creato grafico (filled map)
+ho fatto card per ratio popolazione totale/rifugiati totali e fatto un grafico a linee. Usato un secondary asse y per mostrare la crescita in modo coerente essendo le due misure molto differenti (miliardi vs milioni)  
+
